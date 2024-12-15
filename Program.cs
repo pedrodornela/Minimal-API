@@ -311,7 +311,7 @@ app.MapDelete("/veiculos/{id}", ([FromRoute] int id, IVeiculoServico veiculoServ
 
     return Results.NoContent();
 }).RequireAuthorization()
-.RequireAuthorization(new AuthorizeAttribute {Roles = "Adm,Editor" })
+.RequireAuthorization(new AuthorizeAttribute {Roles = "Adm" })
 .WithTags("Veículos");
 
 #endregion
